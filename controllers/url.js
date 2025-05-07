@@ -21,7 +21,7 @@ export const encodeurl = async (req, res) => {
     const result = urlService.createShortUrl(originalUrl, baseUrl);
     res.status(201).json(result);
   } catch (error) {
-    console.error("Error creating short URL:", error);
+    // console.error("Error creating short URL:", error);
     res.status(500).json({ error: 'Internal Server Error' });
   }
 };
@@ -42,7 +42,7 @@ export const decodeurl = async (req, res) => {
     
     res.status(200).json({ originalUrl: urlData.originalUrl });
   } catch (error) {
-    console.error("Error decoding URL:", error);
+    // console.error("Error decoding URL:", error);
     res.status(500).json({ error: 'Internal Server Error' });
   }
 };
@@ -53,7 +53,7 @@ export const listUrls = async (req, res) => {
     const urls = urlService.listUrls(baseUrl);
     res.status(200).json(urls);
   } catch (error) {
-    console.error("Error listing URLs:", error);
+    // console.error("Error listing URLs:", error);
     res.status(500).json({ error: 'Internal Server Error' });
   }
 };
@@ -71,7 +71,7 @@ export const getStats = async (req, res) => {
     
     res.status(200).json(urlStats);
   } catch (error) {
-    console.error("Error getting URL stats:", error);
+    // console.error("Error getting URL stats:", error);
     res.status(500).json({ error: 'Internal Server Error' });
   }
 };
@@ -93,7 +93,7 @@ export const redirectUrl = async (req, res) => {
 
     res.redirect(urlData.originalUrl);
   } catch (error) {
-    console.error("Error redirecting URL:", error);
+    // console.error("Error redirecting URL:", error);
     res.status(500).json({ error: 'Internal Server Error' });
   }
 };
