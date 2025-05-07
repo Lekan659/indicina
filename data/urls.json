@@ -78,5 +78,13 @@
     "createdAt": "2025-05-07T12:36:27.820Z",
     "lastAccessedAt": "2025-05-07T12:48:27.875Z",
     "clicks": 1
+  },
+  "aGBrIXE3": {
+    "longUrl": "https://goal.com",
+    "shortUrl": "http://localhost:4000/aGBrIXE3",
+    "shortCode": "aGBrIXE3",
+    "createdAt": "2025-05-07T14:40:47.542Z",
+    "lastAccessedAt": null,
+    "clicks": 0
   }
 }
