@@ -1,17 +1,10 @@
 const chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-const base = chars.length;
+const length = 8;
 
-export function encode(id) {
-  
-  let short = '';
-  while (id > 0) {
-    short = chars[id % base] + short;
-    id = Math.floor(id / base);
+export function encode() {
+  let id = '';
+  for (let i = 0; i < length; i++) {
+    id += chars[Math.floor(Math.random() * chars.length)];
   }
-  return short || '0';
-
-}
-
-export function decode(str) {
-  return str.split('').reduce((acc, char) => acc * base + chars.indexOf(char), 0);
+  return id;
 }
